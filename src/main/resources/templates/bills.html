@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bills</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th> Name </th>
+        <th> Payment Value </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="bill : ${bills}">
+        <td><span th:text="${bill.name}"> Name </span></td>
+        <td><span th:text="${bill.paymentValue}"> Payment Value </span></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
